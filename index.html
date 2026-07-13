@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oratile Mongale — Data Analysis for Small Business</title>
+<meta name="description" content="Freelance data analysis for small businesses. I clean your spreadsheets, find what's actually going on, and hand you a plain-English answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#top" class="logo">OM<span class="logo-dot">/</span>DATA</a>
+    <nav class="site-nav">
+      <a href="#what-i-do">What I do</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Freelance data analyst · small businesses</p>
+        <h1>Your books already have the answers.<br>I find them.</h1>
+        <p class="hero-sub">
+          I take the spreadsheet you've been avoiding — sales, stock, bookings, whatever you're tracking —
+          and turn it into three or four sentences you can actually act on.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a free look at your data</a>
+          <a href="#what-i-do" class="btn btn-ghost">See what I do</a>
+        </div>
+      </div>
+
+      <div class="hero-ledger" aria-hidden="true">
+        <div class="ledger-card">
+          <div class="ledger-head">
+            <span class="ledger-dot"></span>
+            <span class="ledger-title">sales_q2_final_FINAL2.xlsx</span>
+          </div>
+          <div class="ledger-body" id="ledgerBody">
+            <table class="ledger-table" id="ledgerTable">
+              <thead>
+                <tr><th>Date</th><th>Item</th><th>Qty</th><th>Total</th></tr>
+              </thead>
+              <tbody id="ledgerRows"></tbody>
+            </table>
+            <div class="ledger-insight" id="ledgerInsight">
+              <span class="insight-label">Insight</span>
+              <span class="insight-text" id="insightText"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="section" id="what-i-do">
+    <div class="wrap">
+      <p class="section-eyebrow">What I do</p>
+      <h2 class="section-title">Three things, done properly</h2>
+      <div class="card-grid">
+        <article class="service-card">
+          <p class="service-mark">CLEAN</p>
+          <h3>Get your data usable</h3>
+          <p>Duplicate rows, inconsistent formats, missing values, three different date styles in one column — sorted before anything else happens.</p>
+        </article>
+        <article class="service-card">
+          <p class="service-mark">ANALYZE</p>
+          <h3>Find what's actually true</h3>
+          <p>Which products carry the business, where the losses hide, which customers are worth chasing. Real patterns, not vibes.</p>
+        </article>
+        <article class="service-card">
+          <p class="service-mark">REPORT</p>
+          <h3>Explain it in plain English</h3>
+          <p>A short, readable summary with the two or three numbers that matter — no jargon, no 40-tab workbook you'll never open again.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" id="how">
+    <div class="wrap">
+      <p class="section-eyebrow">How it works</p>
+      <h2 class="section-title">Three steps, start to finish</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Send your data</h3>
+            <p>Whatever format it's in — Excel, Google Sheets, a CSV export, even a folder of receipts. No cleanup needed on your end.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>I dig in</h3>
+            <p>I clean it, check it against itself, and run the analysis that actually answers your question — not a generic dashboard.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>You get a decision, not a report</h3>
+            <p>A short write-up plus the numbers behind it, so you can act the same day it lands in your inbox.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">Oratile "Ese" Mongale</h2>
+        <p>
+          I'm an aspiring data scientist finishing my BSc in Mathematical Sciences (Mathematics &amp; Mathematical
+          Statistics) at the University of Johannesburg, alongside the ALX Africa Data Science Programme.
+          Day to day, I work as a Junior Technical Business Support Analyst, and I've built applied experience
+          in credit analytics and risk analysis along the way.
+        </p>
+        <p>
+          Small businesses rarely have a data team — usually just a spreadsheet and a hunch. I like working
+          in that gap: taking the data you already have and turning it into something you can actually
+          make a call on.
+        </p>
+      </div>
+      <div class="about-tools">
+        <p class="tools-label">Tools I work in</p>
+        <ul class="tool-pills">
+          <li>Python</li>
+          <li>R</li>
+          <li>Java</li>
+          <li>C++</li>
+          <li>SQL</li>
+          <li>Excel / Sheets</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="section-eyebrow">Get in touch</p>
+        <h2 class="section-title">Tell me what you're tracking</h2>
+        <p class="contact-sub">
+          A sentence or two about your business and what you're trying to figure out is plenty to start with.
+        </p>
+      </div>
+      <form class="contact-form" id="contactForm" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          What are you trying to figure out?
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-note">Opens your email client — replace this with a form service later if you'd rather not expose your inbox directly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Oratile Mongale</span>
+    <div class="footer-links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://sites.google.com/view/oratilemongale/home" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
