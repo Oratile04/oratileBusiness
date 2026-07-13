@@ -26,9 +26,6 @@ html{ scroll-behavior: smooth; }
 body{
   margin: 0;
   background: var(--paper);
-  background-image:
-    linear-gradient(var(--paper-line) 1px, transparent 1px);
-  background-size: 100% 42px;
   color: var(--ink);
   font-family: var(--font-serif);
   font-size: 17px;
@@ -83,9 +80,10 @@ a{ color: inherit; }
 .logo{
   font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 .logo-dot{ color: var(--gold); }
 
@@ -230,12 +228,12 @@ a{ color: inherit; }
   padding: 5px 6px;
   border-bottom: 1px dashed var(--paper-line);
   color: var(--ink-soft);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s ease, color 0.6s ease;
 }
 .ledger-table td.neg{ color: var(--red); }
 .ledger-table tr.fading td{
-  opacity: 0;
-  transform: translateY(-4px);
+  opacity: 0.4;
+  color: var(--ink-faint);
 }
 
 .ledger-insight{
@@ -340,9 +338,24 @@ a{ color: inherit; }
 /* About */
 .about-grid{
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 56px;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "photo copy"
+    "photo tools";
+  column-gap: 40px;
+  row-gap: 32px;
 }
+.about-photo{ grid-area: photo; }
+.profile-img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--paper-line);
+  display: block;
+}
+.about-copy{ grid-area: copy; }
+.about-tools{ grid-area: tools; align-self: start; }
 .about-copy p{ color: var(--ink-soft); font-size: 16.5px; }
 .about-copy p:first-of-type{ color: var(--ink); font-size: 17.5px; }
 
@@ -440,7 +453,15 @@ a{ color: inherit; }
 @media (max-width: 880px){
   .hero-grid{ grid-template-columns: 1fr; }
   .card-grid{ grid-template-columns: 1fr; }
-  .about-grid, .contact-grid{ grid-template-columns: 1fr; gap: 36px; }
+  .about-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "copy"
+      "tools";
+  }
+  .about-photo{ max-width: 160px; }
+  .contact-grid{ grid-template-columns: 1fr; gap: 36px; }
   .site-nav{
     position: absolute;
     top: 68px; left: 0; right: 0;

@@ -94,6 +94,9 @@ function runLedgerSequence() {
 const ledgerSection = document.querySelector('.hero-ledger');
 let hasRun = false;
 
+// Always show real data immediately, even before any animation triggers
+buildRows();
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !hasRun) {
@@ -101,6 +104,6 @@ const observer = new IntersectionObserver((entries) => {
       runLedgerSequence();
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.3 });
 
 observer.observe(ledgerSection);
