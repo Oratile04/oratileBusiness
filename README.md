@@ -1,39 +1,26 @@
 # Oratile Mongale Data Analysis for Small Business
 
-A single-page, plain HTML/CSS/JS site for freelance data analysis work aimed at small
-businesses. No build step, no frameworks — open `index.html` and it just works.
+A single page, plain HTML/CSS/JS site developed for freelance data analysis services aimed at small businesses. The site requires no build process and no frameworks, opening directly via `index.html`.
 
 ## Structure
-
-```
 .
-├── index.html        # all page content
-├── css/style.css      # design system + layout
-├── js/script.js        # nav toggle + hero animation
+├── index.html # all page content
+├── css/style.css # design system + layout
+├── js/script.js # nav toggle + hero animation
 └── README.md
-```
+## Contact and Contact Form
 
-## Before you publish — edit these
+The site includes a contact section with a real email address and a LinkedIn profile link in the footer of `index.html`. A portfolio link is also included in the footer.
 
-Search the files for the placeholders below and swap in your real details:
+The contact form submits via `mailto:`, which opens the visitor's email client directly. This approach is suitable for the current stage of the site. A more robust solution, such as Formspree or Web3Forms, may be implemented at a later stage by updating the `action` attribute of the form, without requiring a full rebuild.
 
-| Placeholder | Where | What to change it to |
-|---|---|---|
-| `youremail@example.com` | `index.html` (contact form + footer) | Your real email |
-| LinkedIn URL `https://www.linkedin.com/` | `index.html` footer | Your actual profile URL |
-| Portfolio link | `index.html` footer | Already points at your Google Sites page — update or remove |
-| Hero stats / sample data | `js/script.js` (`rowsData`, `insightSentence`) | Feel free to swap for a different mock example, or leave as-is |
+## Hero Section
 
-The contact form currently submits via `mailto:`, which just opens the visitor's email
-client — fine to start, but it exposes your address in the page source and doesn't work
-well on all devices. When you're ready for something sturdier, swap the `<form>` for a
-free service like [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com)
-(just change the `action` attribute, no rebuild needed).
+The hero section includes sample data in `js/script.js` (`rowsData`, `insightSentence`) used to demonstrate the kind of analytical work described on the page.
 
-## Running it locally
+## Running Locally
 
-No install required — just open `index.html` in a browser. If you want a local server
-(recommended, so relative paths and fonts behave exactly like production):
+No installation is required. The site can be opened directly via `index.html` in a browser. For accurate testing of relative paths and fonts, a local server is recommended.
 
 ```bash
 # Python 3
@@ -43,34 +30,29 @@ python3 -m http.server 8000
 
 ## Publishing with GitHub Pages
 
-1. Create a new repository on GitHub (e.g. `ese-data-site`) — don't initialize it with a
-   README, since you already have one here.
-2. From this project folder:
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
+The site is published using GitHub Pages, following this process.
+
+1. A repository is created on GitHub without an initial README, as one is already included in this project.
+2. The project is pushed to the repository:
+```bash
+   git remote add origin https://github.com/Oratile04/oratile portfolio3.git
    git branch -M main
    git add .
    git commit -m "Initial site"
    git push -u origin main
-   ```
-3. On GitHub: go to **Settings → Pages**.
-4. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-5. Under **Branch**, choose `main` and `/ (root)`, then **Save**.
-6. Wait a minute or two — your site will be live at:
-   ```
-   https://<your-username>.github.io/<your-repo>/
-   ```
+```
+3. Under repository **Settings → Pages**, the deployment source is set to **Deploy from a branch**.
+4. The branch is set to `main` and the folder to `/ (root)`, then saved.
+5. The site becomes available shortly after at:
 
-### Using a custom domain (optional)
+https://Oratile04.github.io/oratile portfolio3/
 
-If you buy a domain later: add a `CNAME` file to the repo root containing just your
-domain (e.g. `esedata.com`), then point your domain's DNS at GitHub Pages following
-[GitHub's custom domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+### Custom Domain
 
-## Notes on the design
+Should a custom domain be added in future, a `CNAME` file containing the domain name is placed at the repository root, with DNS configured according to GitHub's custom domain documentation.
 
-The hero includes a small animated "ledger" — a messy sales table that resolves into a
-plain-English insight — as a stand-in for the kind of work described on the page. It
-respects `prefers-reduced-motion` and re-triggers each time it scrolls back into view.
-Fonts are loaded from Google Fonts (`IBM Plex Mono` + `Source Serif 4`); if you'd rather
-not depend on an external font host, they can be self-hosted in a `fonts/` folder instead.
+## Design Notes
+
+The hero section features a small animated ledger display, a disorganized sales table that resolves into a clear, plain English insight, representing the type of analytical work described on the page. The animation respects `prefers reduced motion` settings and re triggers each time it re enters the viewport.
+
+Fonts are loaded via Google Fonts (`IBM Plex Mono` and `Source Serif 4`). These may be self hosted in a `fonts/` folder if reliance on an external font host is not desired.
