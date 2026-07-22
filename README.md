@@ -1,4 +1,4 @@
-# Oratile Mongale — Data Analysis for Small Business
+# Oratile Mongale Data Analysis for Small Business
 
 A single-page, plain HTML/CSS/JS site for freelance data analysis work aimed at small
 businesses. No build step, no frameworks — open `index.html` and it just works.
